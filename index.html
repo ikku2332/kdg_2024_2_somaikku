@@ -1,1 +1,99 @@
+{% load static %}
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>真夜中のパン屋さん 紹介サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="小説「真夜中のパン屋さん」の紹介サイト">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="{% static 'mayopanintroductionapp/css/style.css' %}">
+</head>
+
+<body>
+
+<header>
+<h1 id="logo"><a href="{% url 'mayopanintroduction' %}">真夜中のパン屋さん<br>紹介サイト</a></h1>
+<nav id="menubar">
+<ul>
+<li><a href="{% url 'mayopanintroduction' %}">本に関する情報</a></li>
+<li><a href="{% url 'mayopansynopsis' %}">あらすじ</a></li>
+<li><a href="{% url 'mayopancharacter' %}">キャラクター</a></li>
+</ul>
+</nav>
+</header>
+
+<div id="container">
+
+<div id="contents">
+
+<section id="new">
+
+<h2>本に関する情報</h2>
+<h3>本について</h3>
+
+<div class="bread"></div>
+
+<table class="ta1">
+    <caption>真夜中のパン屋さん（小説）</caption>
+    <tr>
+    <th>著者</th>
+    <td>大沼紀子</td>
+    </tr>
+    <tr>
+    <th>ジャンル</th>
+    <td>キャラクター小説</td>
+    </tr>
+    <tr>
+    <th>出版社</th>
+    <td>ポプラ社</td>
+    </tr>
+    <tr>
+    <th>レーベル</th>
+    <td>ポプラ文庫</td>
+    </tr>
+    <tr>
+    <th>巻数</th>
+    <td>全六巻</td>
+    </tr>
+    <tr>
+    <th>略称</th>
+    <td>まよパン</td>
+    </tr>
+</table>
+
+<p>「真夜中のパン屋さん」は、2011年から発行されている小説シリーズ。</p>
+<p>営業時間が深夜である午後の11時から午前の5時までという風変わりパン屋である「ブランジェリークレバヤシ」を舞台にした小説。<br>
+シリアスで重い内容に個性的なキャラクター達の交流を乗せて描かれた温もりのある作品。</p>
+
+<dl>
+{% for item in object_list %}
+<dt>{{ item.date|date:"Y/m/j"}}</dt>
+<dd>{{ item.text }}</dd>
+{% endfor %}
+</dl>
+
+</section>
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<footer>
+<small>Copyright&copy; <a href="{% url 'mayopanintroduction' %}">真夜中のパン屋さん 紹介サイト</a> All Rights Reserved.</small>
+<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+<!--jQueryファイルの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--ページの上部へ戻るボタンとスクリプト-->
+<p class="scroll"><a href="#">↑</a></p>
+<script src="{% static 'mayopanintroductionapp/js/scroll.js' %}"></script>
+
+</body>
+</html>
