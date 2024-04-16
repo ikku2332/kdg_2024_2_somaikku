@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>真夜中のパン屋さん 紹介サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="小説「真夜中のパン屋さん」の紹介サイト">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="{% static 'mayopanintroductionapp/css/style.css' %}">
+</head>
+
+<body>
+
+<header>
+<h1 id="logo"><a href="{% url 'mayopanintroduction' %}">真夜中のパン屋さん<br>紹介サイト</a></h1>
+<nav id="menubar">
+<ul>
+<li><a href="{% url 'mayopanintroduction' %}">本に関する情報</a></li>
+<li><a href="{% url 'mayopansynopsis' %}">あらすじ</a></li>
+<li><a href="{% url 'mayopancharacter' %}">キャラクター</a></li>
+</ul>
+</nav>
+</header>
+
+<div id="container">
+
+<div id="contents">
+
+<section id="company">
+
+<h2>あらすじ</h2>
+
+<h3>午前0時のレシピ</h3>
+<table class="ta1">
+<tr>
+<th>Open</th>
+<td>半月ほど前にオープンした、オーナーの暮林陽介(くればやしようすけ)とブランジェの柳弘基(やなぎひろき)が営業する、営業時間が午後二十三時から午前二十九時のパン屋さん「ブランジェリークレバヤシ」。<br>そこにオーナーのの妻、美和子(みわこ)の腹違いの妹を名乗る女子高生、希実(のぞみ)が現れる。</td>
+</tr>
+<tr>
+<th>Fraisage<br>-材料を混ぜ合わせる-</th>
+<td>4/1のエイプリルフールに希実はカッコウの親のように托卵を続けていた母の、とある事情で家を追い出される。<br>そして希実の新しい巣として腹違いの姉、美和子の家で暮らすことになるのだが...。</td>
+</tr>
+<tr>
+<th>Pétrissage & Pointage<br>-生地捏ね&第一次発酵-</th>
+<td>「ブランジェリークレバヤシ」の開店前に現れた少年、水野こだま(みずのこだま)は店のパンを持ち去ろうとする。しかしその行動にも理由があり...？</td>
+</tr>
+<tr>
+<th>Divisio&Détente<br>-分割&ベンチタイム-</th>
+<td>デリバリーサービスを始めた「ブランジェリークレバヤシ」で配達をすることになった希実。<br>ある男の家に配達に行った後に違和感を感じる。暮林と弘基はに伝えてみるも違和感は届かず。<br>しかし、不慮の事故により男の部屋に入ることになった希実はその原因を見てしまう...。</td>
+</tr>
+<tr>
+<th>Façonnage&Apprêt<br>-成形&第二次発酵-</th>
+<td>とある事情によりチラシ配りをすることになってしまった希実。ひょんなことでチラシ配りをすることになってしまった希実の前に、大柄な人が現れる。<br>足にはハイヒールを履いていたため女性と思われたが、声は男のそれであった。。</td>
+</tr>
+<tr>
+<th>Coupe<br>-クープ-</th>
+<td>柳弘基の人生は美和子に誉めてもらえるかであり、美和子が人生の判断基準になっていると言えた。<br>柳弘基がブランジェになることを目指した理由も美和子によるものであったが...。</td>
+</tr>
+<tr>
+<th>Cuisson avec buée<br>-焼成-</th>
+<td>弘基が美和子について話す時、何かにつけて運命という言葉を使うため、<br>暮林は最近しばしば運命というものについて考えるようになる。<br>また、それにより美和子と共に過ごしていた昔のことについても考え始める。</td>
+</tr>
+</table>
+
+<h3>午前1時のレシピ</h3>
+<table class="ta1">
+<tr>
+<th>Open</th>
+<td>テスト<br>テスト</td>
+</tr>
+<tr>
+<th>Fraisage<br>-材料を混ぜ合わせる-</th>
+<td>テスト<br>テスト</td>
+</tr>
+<tr>
+<th>Pétrissage & Pointage<br>-生地捏ね&第一次発酵-</th>
+<td>テスト<br>テスト</td>
+</tr>
+<tr>
+<th>Divisio&Détente<br>-分割&ベンチタイム-</th>
+<td>テスト<br>テスト</td>
+</tr>
+<tr>
+<th>Façonnage&Apprêt<br>-成形&第二次発酵-</th>
+<td>テスト<br>テスト</td>
+</tr>
+<tr>
+<th>Coupe<br>-クープ-</th>
+<td>テスト<br>テスト</td>
+</tr>
+<tr>
+<th>Cuisson avec buée<br>-焼成-</th>
+<td>テスト<br>テスト</td>
+</tr>
+</table>
+
+</section>
+<!--/#company-->
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<footer>
+<small>Copyright&copy; <a href="{% url 'mayopanintroduction' %}">真夜中のパン屋さん 紹介サイト</a> All Rights Reserved.</small>
+<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+<!--jQueryファイルの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--ページの上部へ戻るボタンとスクリプト-->
+<p class="scroll"><a href="#">↑</a></p>
+<script src="{% static 'mayopanintroductionapp/js/scroll.js' %}"></script>
+
+</body>
+</html>

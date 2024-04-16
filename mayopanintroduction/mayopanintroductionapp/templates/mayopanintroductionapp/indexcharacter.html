@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>真夜中のパン屋さん 紹介サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="小説「真夜中のパン屋さん」の紹介サイト">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="{% static 'mayopanintroductionapp/css/style.css' %}">
+</head>
+
+<body>
+
+<header>
+<h1 id="logo"><a href="{% url 'mayopanintroduction' %}">真夜中のパン屋さん<br>紹介サイト</a></h1>
+<nav id="menubar">
+<ul>
+<li><a href="{% url 'mayopanintroduction' %}">本に関する情報</a></li>
+<li><a href="{% url 'mayopansynopsis' %}">あらすじ</a></li>
+<li><a href="{% url 'mayopancharacter' %}">キャラクター</a></li>
+</ul>
+</nav>
+</header>
+
+<div id="container">
+
+<div id="contents">
+
+<section id="service">
+
+<h2>キャラクター</h2>
+
+<table class="ta1">
+<tr>
+<th>篠崎 希実</th>
+<td>常に何かに腹を立てている女子高生。<br>とある事情で親に追い出され、ブランジェリークレバヤシで居候として暮らしている。<br>ブランジェリークレバヤシに来る前は母によってカッコウのように様々な家に預けられていた。</td>
+</tr>
+<tr>
+<th>暮林 陽介</th>
+<td>ブランジェリークレバヤシのオーナー兼ブランジェ。<br>白いコックスーツを着る不器用な笑顔の30代。<br>不器用だがパン屋をしている理由は亡き妻、美和子の夢を叶えるため。</td>
+</tr>
+<tr>
+<th>柳 弘基</th>
+<td>ブランジェリークレバヤシのブランジェ。<br>仕事中は墨色のコックスーツを着るイケメンだが、私服の趣味は希実から毒キノコと言われるようなものである。<br>口が悪く、希実とはよく言い合いをするが根は優しく一途。</td>
+</tr>
+<tr>
+<th>斑目 裕也</th>
+<td>探偵能力に長けている脚本家。三面の窓に複数の望遠鏡を設置し、人間観察をしている。<br>自らのことを変態と考えているが、外道に堕ちないための自分ルールは設けている。<br>希実にも最初は変態を思われていたが人柄は良いためのちに友人となる。</td>
+</tr>
+<tr>
+<th>ソフィア</th>
+<td>ブランジェリークレバヤシの常連客であるニューハーフ。<br>ニューハーフバーのママだったが、経営難に陥っていた時お店の仲間に金を持ち逃げされたため、1巻目ではホームレス生活をしている。<br>ソフィアという名前は戸籍上のものではなく、女優のソフィア・ローレンにあやかり自らつけたもの。</td>
+</tr>
+<tr>
+<th>水野 こだま</th>
+<td>ブランジェリークレバヤシのお客様である小学生男子。名前の由来は新幹線のこだまから。<br>こだまと新幹線つながりである希実の弟分としてパン作りの練習に時折参加するようになる。</td>
+</tr>
+</table>
+
+</section>
+<!--/#service-->
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<footer>
+<small>Copyright&copy; <a href="{% url 'mayopanintroduction' %}">真夜中のパン屋さん 紹介サイト</a> All Rights Reserved.</small>
+<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+<!--jQueryファイルの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--ページの上部へ戻るボタンとスクリプト-->
+<p class="scroll"><a href="#">↑</a></p>
+<script src="{% static 'mayopanintroductionapp/js/scroll.js' %}"></script>
+
+</body>
+</html>
